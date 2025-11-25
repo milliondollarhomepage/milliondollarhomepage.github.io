@@ -5,6 +5,7 @@ import {
   LazyInteractiveMap,
 } from './components/LazyComponents';
 import ErrorBoundary from './components/ErrorBoundary';
+import { CookieBanner } from './components/CookieBanner';
 import { useAppStore } from './stores/appStore';
 import { useGlobalKeyboardShortcuts } from './hooks/useKeyboardNavigation';
 import { AppData } from './types';
@@ -345,6 +346,7 @@ const App = React.memo(() => {
   return (
     <ErrorBoundary>
       {mainContent}
+      <CookieBanner />
     </ErrorBoundary>
   );
 });
